@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_jefe_r_skills,access_jefe_r_skills,skills,grupo_administrador_skills,1,1,1,1
+
+access_urs_local_r_skills,access_urs_local_r_skills,skills,grupo_usuario_local_skills,1,0,0,0

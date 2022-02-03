@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="sec_skills" model="ir.module.category">
+        <field name="name">Skills</field>
+        <field name="sequence">10</field>
+    </record>
+    <record id="grupo_administrador_skills" model="res.groups">
+        <field name="name">Puede acceder al módulo de Habilidades</field>
+        <field name="category_id" ref="sec_skills"/>
+    </record>
+    <record id="grupo_usuario_local_skills" model="res.groups">
+        <field name="name">No puede acceder al módulo de Habilidades</field>
+        <field name="category_id" ref="sec_skills"/>
+    </record>
+</odoo>

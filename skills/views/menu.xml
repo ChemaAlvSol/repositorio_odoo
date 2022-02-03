@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <!-- View list -->
+    <record id="view_tree_skills" model="ir.ui.view">
+        <field name="name">view.tree.skills</field>
+        <field name="model">skills</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="skill"/>
+                <field name="years"/>
+                <field name="percent"/>
+                <field name="partner_id" />
+                <field name="company_id" />
+            </tree>
+        </field>
+    </record>
+    <!-- form view-->
+    <record id="view_form_skills" model="ir.ui.view">
+        <field name="name">view.form.skills</field>
+        <field name="model">skills</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                            <field name="skill"/>
+                            <field name="years"/>
+                        </group>
+                        <group>
+                            <field name="percent"/>
+                            <field name="partner_id" />
+                            <field name="company_id" />
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+    <!-- form view-->
+    <record id="action_skills" model="ir.actions.act_window">
+        <field name="name">Skills</field>
+        <field name="res_model">skills</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_tree_skills"/>
+        <field name="target">current</field>
+    </record>
+
+    <menuitem id="menu_action_skills"
+        name="Skills"
+        action="action_skills"
+        parent="contacts.menu_contacts"
+        sequence="4"/>
+</odoo>
